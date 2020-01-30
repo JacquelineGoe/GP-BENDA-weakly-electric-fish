@@ -1,0 +1,148 @@
+
+\documentclass[12pt,a4paper,pdftex]{article}
+
+% packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Sprache
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+% Page layout
+\usepackage{geometry}
+\geometry{a4paper,lmargin={2.5cm}, rmargin={2.5cm}, tmargin={2.5cm}, bmargin={2.5cm}}
+
+% figures
+\usepackage{graphicx}
+% Bilder importieren
+\usepackage{epstopdf}
+\epstopdfDeclareGraphicsRule{.pdf}{png}{.png}{convert #1 \OutputFile}
+\DeclareGraphicsExtensions{.png,.pdf}
+% Figure and Caption layout
+\usepackage[bf]{caption}
+\usepackage[list=true, font=large, labelfont=bf, 
+labelformat=brace, position=top]{subcaption}\usepackage{wrapfig}
+\usepackage{setspace}
+
+% ABB. Verzeichnis (mehr Abstand zw. nummer und titel)
+\usepackage{tocloft}
+\setlength{\cftfignumwidth}{1.2cm}
+\setlength{\cfttabnumwidth}{1.2cm}
+
+% Befehle zur Textauszeichnung (hervorheben, unterstreichen ect.)
+\usepackage{color,soul}
+\usepackage{xcolor} % bunter Text
+
+% Zitier-Style 
+\usepackage{natbib}
+\setcitestyle{author,year}
+\usepackage[breaklinks=true,bookmarks=true,bookmarksopen=true,colorlinks=true,citecolor=gray,linkcolor=black,urlcolor=gray,pdfpagemode=UseNone,pdfstartview=FitH]{hyperref}
+
+% other packages
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage{siunitx}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{pgfgantt}
+\usepackage{afterpage}
+% für chemische zeichen
+\usepackage[version=4]{mhchem}
+\usepackage{upgreek}
+% for commenting a whole section
+\usepackage{verbatim}
+% plus minus zeichen
+\newcommand{\rpm}{\raisebox{.2ex}{$\scriptstyle\pm$} }
+
+
+% Titelseite
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\setlength{\parindent}{0pt}
+
+\begin{titlepage}
+ \begin{center}
+        \vspace{1cm}
+        \Large
+        Winter term 2019/2020\\
+        Report of the master module: Großpraktikum
+ 
+        \vspace*{4cm}
+        \LARGE
+        \textbf{Habitat Selection of Different Species of Gymnotiform Weakly Electric Fish}\\
+        \vspace{0.25cm}
+        \textbf{and}\\
+        \vspace{0.25cm}
+        \textbf{the Correlation with Dominance in \textit{A.~macrostomus} in LLanos of the Orinoco~Basin, Colombia}
+        \vspace{5cm}
+        
+        \large
+        Jacqueline Laura Göbl,\\ Julia Grüb,\\ Max Kühn
+        \vspace{0.5cm}
+        
+        Supervisor: Prof. Dr. Jan Benda
+        
+        \vfill
+        \large     
+        T\"ubingen, \today
+    \end{center}
+    
+    %\newpage
+    %    \thispagestyle{empty}
+    %    \mbox{}
+    %    \newpage
+\end{titlepage}
+
+
+\thispagestyle{empty}
+\mbox{}
+
+
+% Inhaltsverzeichnis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\thispagestyle{empty}
+
+% Textbegin
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Introduction}
+\input{Chapters/Introduction.tex} 
+
+\newpage
+\section{Methods}
+\input{Chapters/Methods.tex} 
+
+
+\newpage
+\section{Results}
+\input{Chapters/Results.tex} 
+
+
+\newpage
+\section{Discussion}
+\input{Chapters/Discussion.tex} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{abbrvnat}
+\bibliography{references}
+
+\newpage
+\section{Supplementary}
+% ___________________________________________________________
+
+\textcolor{blue}{1. Abstract: Dominance between territorial males not only determines their fitness but might also influence selection of resting sites, because better resting sites might reduce physiological costs. The Gymnotiform weakly electric fish Apteronotus macrostomus is a nocturnal fish that evolved an electric organ derived from nerve cells as part of an active electrosensory system used for localization and communication. Electric organ discharges (EOD) generate species and individual specific EOD frequencies that are also indicating dominance among males. Dominant males with the highest EOD frequencies have been shown to defend the best shelters against subordinate males in staged laboratory settings. Here we correlate EOD frequencies and micro-habitat properties of A. macrostomus in its natural habitat, the Canocamoa river in the Meta region of the Llanos, Colombia, which drains into the Orinoco river. By using a fishfinder we recorded over 300 electric fish of various species in 139 different micro-habitats. Based on EOD waveforms and frequencies we identified A. macrostomus, which was the most abundant species. During the day, we found A. macrostomus in various habitats with distinct water velocities ranging from 0 to 2.5 m/s. The fish preferred stacked stones and root formations for shelter. Males with the highest EOD frequencies were exclusively found in stacked stone habitats, indicating that these are the best shelters and are successfully defended by the most dominant males. Thus, we found that effects of dominance on shelter selection as shown previously in the lab also play a role under natural conditions.}\\
+
+\textcolor{blue}{2. abstract: There are arguably few places in the world that can claim a biodiversity as high as Colombia’s. Colombia’s unique ecosystem is comprised of innumerous animal species that have adapted to a diverse set of habitats. Among these, weakly electric fish make up 70\% of the biomass of the respective native fish fauna. The south American weakly electric fish of the order Gymnotiformes evolved an electric organ which cells discharge simultaneously and create an electric field around the animal. They use this electric organ discharge (EOD) for electrolocation and communication. While this electrosensory system is well researched in the lab, much less is known about the ecology and ethology of these fishes. We assessed habitat conditions and habitat preferences of Gymnotiform fishes in the Rio Canocamao of the Orinoco basin, in the Reserva el Caduceo in San Martin, Meta, Colombia. Across this tropical grassland plane stretches a widely ramified network of river channels with pastures and secondary tropical forests in between. The self generated electric fields were used to record and detect individual electric fish in their natural environment. We categorized their distribution across a wide range of natural river habitats that we characterized by water flow, water depth and structure of the river bed. Within 139 recordings we detected more than 300 weakly electric fish of various species. Based on EOD properties and frequencies extracted from the recordings, we classified the fish into four species groups: wave-type fish of the genera Apteronotus, Eigenmannia, and Sternopygus and pulse-type fish. These species strongly differed in their abundance and habitat preference. By far, Apteronotus was the most frequent and clearly preferred to hide between stacked stones during the day. Eigenmannia tended to stay inside root formations. Pulse-type fish preferred to hide in water plants. Eigenmannia and pulse-fish were found in habitats with low water speeds (lesser than   0.5 m/s), whereas Apteronotus was also found in much faster flowing waters. The diversity of occupied niches suggests strong physiological and behavioral adaptations of the different species of weakly electric fish.}
+
+\end{document}
